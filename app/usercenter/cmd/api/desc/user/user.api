@@ -60,3 +60,14 @@ type (
 		UserInfo User `json:"userInfo"`
 	}
 )
+
+type (
+	ChangePasswordReq {
+		OldPassword     string `json:"oldPassword"`        // 旧密码
+		NewPassword     string `json:"newPassword"`        // 新密码
+		ConfirmPassword string `json:"confirmPassword"`    // 确认新密码
+	}
+	ChangePasswordResp {
+		// 空响应，使用统一格式
+	}
+)

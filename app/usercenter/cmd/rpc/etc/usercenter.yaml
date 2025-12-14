@@ -14,11 +14,11 @@ Prometheus:
   Path: /metrics
 
 #Link Tracking
-Telemetry:
-  Name: usercenter-rpc
-  Endpoint: http://jaeger:14268/api/traces
-  Sampler: 1.0
-  Batcher: jaeger
+#Telemetry:
+#  Name: usercenter-rpc
+#  Endpoint: http://jaeger:14268/api/traces
+#  Sampler: 1.0
+#  Batcher: jaeger
 
 Log:
   ServiceName: usercenter-rpc

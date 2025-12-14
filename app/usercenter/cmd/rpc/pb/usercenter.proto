@@ -80,6 +80,14 @@ message GenerateTokenResp {
   int64  refreshAfter = 3;
 }
 
+message ChangePasswordReq {
+  int64  userId = 1;
+  string oldPassword = 2;
+  string newPassword = 3;
+}
+message ChangePasswordResp {
+}
+
 //service
 service usercenter {
   rpc login(LoginReq) returns(LoginResp);
@@ -88,4 +96,5 @@ service usercenter {
   rpc getUserAuthByAuthKey(GetUserAuthByAuthKeyReq) returns(GetUserAuthByAuthKeyResp);
   rpc getUserAuthByUserId(GetUserAuthByUserIdReq) returns(GetUserAuthyUserIdResp);
   rpc generateToken(GenerateTokenReq) returns(GenerateTokenResp);
+  rpc changePassword(ChangePasswordReq) returns(ChangePasswordResp);
 }

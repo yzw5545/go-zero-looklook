@@ -40,6 +40,9 @@ func (l *DetailLogic) Detail(req types.UserInfoReq) (*types.UserInfoResp, error)
 	var userInfo types.User
 	_ = copier.Copy(&userInfo, userInfoResp.User)
 
+	// 帮我添加一行logx.Infof("user info: %+v", userInfo)
+	logx.Errorf("user info:12 %+v", userInfo)
+
 	return &types.UserInfoResp{
 		UserInfo: userInfo,
 	}, nil
